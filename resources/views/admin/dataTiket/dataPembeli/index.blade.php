@@ -30,6 +30,7 @@
                   </div>
                   <!-- /.card-header -->
                   <div class="card-body">
+                    <button class="btn btn-md btn-primary"></button>
                     <table class="table table-bordered">
                       <thead>
                         <tr>
@@ -44,33 +45,16 @@
                         <tr>
                           <td>1</td>
                           <td>Ridwan</td>
-                          <td>Selesai</td>
-                          <td>Rincian</td>
+                          <td>Belum bayar</td>
+                          <td>
+                            <div class="btn-list">
+                            <a href="#" class="btn btn-md btn-warning"><i class="fa fa-edit"></i></a>
+                            <a href="#" class="btn btn-md btn-primary"><i class="fa fa-eye"></i></a>
+                            <a href="#"class="btn btn-md btn-danger btn-delete"><i class="fa fa-trash"></i></a>
+                            </div>
+                          </td>
                         </tr>
-                        <tr>
-                          <td>2</td>
-                          <td>Sinta</td>
-                          <td>Pending</td>
-                          <td>Rincian</td>
-                        </tr>
-                        <tr>
-                          <td>3</td>
-                          <td>Ahmad</td>
-                          <td>Selesai</td>
-                          <td>Rincian</td>
-                        </tr>
-                        <tr>
-                          <td>4</td>
-                          <td>Dimas</td>
-                          <td>Selesai</td>
-                          <td>Rincian</td>
-                        </tr>
-                        <tr>
-                          <td>5</td>
-                          <td>Putri</td>
-                          <td>Selesai</td>
-                          <td>Rincian</td>
-                        </tr>
+
                         
                       </tbody>
                     </table>
