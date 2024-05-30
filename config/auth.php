@@ -45,6 +45,11 @@ return [
             'provider' => 'users',
         ],
     
+        'sanctum' => [
+            'driver' => 'sanctum',
+            'provider' => 'customers',
+        ],
+    
         'customer' => [
             'driver' => 'session',
             'provider' => 'customers',
@@ -60,6 +65,7 @@ return [
             'provider' => 'superAdmins',
         ],
     ],
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -154,5 +160,4 @@ return [
     */
 
     'password_timeout' => 10800,
-
 ];
