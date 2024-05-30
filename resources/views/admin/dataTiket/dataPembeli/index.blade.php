@@ -33,31 +33,38 @@
                     <button class="btn btn-md btn-primary"></button>
                     <table class="table table-bordered">
                       <thead>
-                        <tr>
-                          <th style="width: 10px">No</th>
-                          <th>Nama Pembeli</th>
-                          <th>Status</th>
-                          <th>Aksi</th>
-                          {{-- <th style="width: 40px">Label</th> --}}
-                        </tr>
+                          <tr>
+                              <th style="width: 10px">No</th>
+                              <th>Nama Pembeli</th>
+                              <th>Tanggal Kunjungan</th>
+                              <th>Jumlah Tiket</th>
+                              <th>Kode Promo</th>
+                              <th>Total Harga</th>
+                              <th>Status</th>
+                              <th>Aksi</th>
+                          </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>1</td>
-                          <td>Ridwan</td>
-                          <td>Belum bayar</td>
-                          <td>
-                            <div class="btn-list">
-                            <a href="#" class="btn btn-md btn-warning"><i class="fa fa-edit"></i></a>
-                            <a href="#" class="btn btn-md btn-primary"><i class="fa fa-eye"></i></a>
-                            <a href="#"class="btn btn-md btn-danger btn-delete"><i class="fa fa-trash"></i></a>
-                            </div>
-                          </td>
-                        </tr>
-
-                        
+                          @foreach ($tickets as $index => $data)
+                          <tr>
+                              <td>{{ $index + 1 }}</td>
+                              <td>{{ $data->user->name ?? 'Tidak Diketahui' }}</td>
+                              <td>{{ $data->visit_date }}</td>
+                              <td>{{ $data->ticket_count }}</td>
+                              <td>{{ $data->promo_code }}</td>
+                              <td>{{ $data->total_price }}</td>
+                              <td>{{ $data->status }}</td>
+                              <td>
+                                  <div class="btn-list">
+                                      <a href="#" class="btn btn-md btn-warning"><i class="fa fa-edit"></i></a>
+                                      <a href="#" class="btn btn-md btn-danger btn-delete"><i class="fa fa-trash"></i></a>
+                                  </div>
+                              </td>
+                          </tr>
+                          @endforeach
                       </tbody>
-                    </table>
+                  </table>
+                  
                   </div>
                   <!-- /.card-body -->
                   <div class="card-footer clearfix">

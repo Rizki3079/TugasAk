@@ -12,7 +12,7 @@ class CreateTicketsTable extends Migration
     public function up(): void
     {
         Schema::create('tickets', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->bigIncrements('id');
             $table->uuid('user_id');
             $table->date('visit_date');
             $table->integer('ticket_count');

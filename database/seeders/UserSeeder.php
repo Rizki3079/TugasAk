@@ -25,6 +25,7 @@ class UserSeeder extends Seeder
 
         $roles = [
             ['name' => 'Customer', 'guard_name' => 'customer'],
+            ['name' => 'Customer', 'guard_name' => 'sanctum'],
             ['name' => 'Admin', 'guard_name' => 'admin'],
             ['name' => 'superAdmin', 'guard_name' => 'superAdmin']
         ];
@@ -54,17 +55,17 @@ class UserSeeder extends Seeder
 
         $customer = [
             [
-                'username' => 'customer1',
+                'name' => 'customer1',
                 'email' => 'customer1@gmail.com',
                 'password' => bcrypt('password'), // hashed password
             ],
             [
-                'username' => 'customer2',
+                'name' => 'customer2',
                 'email' => 'customer2@gmail.com',
                 'password' => bcrypt('password'), // hashed password
             ],
             [
-                'username' => 'customer3',
+                'name' => 'customer3',
                 'email' => 'customer3@gmail.com',
                 'password' => bcrypt('password'), // hashed password
             ],

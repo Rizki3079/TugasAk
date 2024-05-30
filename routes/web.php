@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TicketController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,9 +68,7 @@ Route::middleware('auth:admin,superAdmin')->group(function () {
 // });
 
 //data pembeli
-Route::get('/dataPembeli', function () {
-    return view('admin.dataTiket.dataPembeli.index');
-});
+Route::get('/dataPembeli', [TicketController::class, 'index']);
 Route::get('/tiket', function () {
     return view('admin.dataTiket.tiket.index');
 });
